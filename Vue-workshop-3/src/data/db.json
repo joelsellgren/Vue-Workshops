@@ -1,0 +1,39 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "title": "Inception",
+            "year_released": 2010,
+            "director": "Christopher Nolan",
+            "main_cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"]
+        },
+        {
+            "id": 2,
+            "title": "The Shawshank Redemption",
+            "year_released": 1994,
+            "director": "Frank Darabont",
+            "main_cast": ["Tim Robbins", "Morgan Freeman", "Bob Gunton"]
+        },
+        {
+            "id": 3,
+            "title": "Pulp Fiction",
+            "year_released": 1994,
+            "director": "Quentin Tarantino",
+            "main_cast": ["John Travolta", "Samuel L. Jackson", "Uma Thurman"]
+        },
+        {
+            "id": 4,
+            "title": "The Dark Knight",
+            "year_released": 2008,
+            "director": "Christopher Nolan",
+            "main_cast": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"]
+        },
+        {
+            "id": 5,
+            "title": "The Godfather",
+            "year_released": 1972,
+            "director": "Francis Ford Coppola",
+            "main_cast": ["Marlon Brando", "Al Pacino", "James Caan"]
+        }
+    ]
+}

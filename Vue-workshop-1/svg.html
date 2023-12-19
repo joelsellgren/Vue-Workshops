@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+            <div id="app">
+                <svg width="300" height="100">
+                    <rect x="0" y="20" :width="progress1 + '%'" height="30" fill="#3498db"></rect>
+                    <text x="10" y="40" fill="#fff">{{ progress1 }}%</text>
+                    
+                    <rect x="0" y="60" :width="progress2 + '%'" height="30" fill="#e74c3c"></rect>
+                    <text x="10" y="80" fill="#fff">{{ progress2 }}%</text>
+                </svg>
+                <div>
+                    <label for="progress1">First input</label>
+                    <input type="number" v-model="progress1" @input="updateProgress(1)" />
+                    <br>
+                    <label for="progress2">Second input</label>
+                    <input type="number" v-model="progress2" @input="updateProgress(2)" />
+                </div>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script>
+            const app = Vue.createApp({
+                data() {
+                    return {
+                        progress1: 0,
+                        progress2: 0
+                    };
+                },
+                methods: {
+                    updateProgress(barNumber) {
+                    if (this[`progress${barNumber}`] < 0) {
+                        this[`progress${barNumber}`] = 0;
+                    } else if (this[`progress${barNumber}`] > 100) {
+                        this[`progress${barNumber}`] = 100;
+                    }
+                },
+                },
+            });
+
+            app.mount('#app');
+        </script>
+    </body>
+</html>

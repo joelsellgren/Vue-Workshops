@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Enkel Räntekalkylator</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Räntekalkylator</h1>
+            <label for="principal">Belopp (SEK): </label>
+            <input type="number" v-model="principal" />
+            <br />
+            <label for="rate">Räntesats (%): </label>
+            <input type="number" v-model="rate" />
+            <br />
+            <label for="time">Tid: </label>
+            <input type="number" v-model="time" />
+            <p>Enkel ränta: {{simpleInterest}}kr</p>
+        </div>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script>
+            const app = Vue.createApp({
+                data() {
+                    return {
+                        principal: 1000,
+                        rate: 5,
+                        time: 1,
+                    };
+                },
+                methods: {},
+                computed: {
+                    simpleInterest() {
+                        return (this.principal * this.rate * this.time) / 100;
+                    },
+                },
+            });
+
+            app.mount('#app');
+        </script>
+    </body>
+</html>
